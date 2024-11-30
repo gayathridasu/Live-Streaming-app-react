@@ -60,7 +60,7 @@ function Room() {
         ref={myMeetingRef}
         style={{ width: '100vw', height: '100vh' }}
       ></div>
-      <h1>{roomId} {name} {role}</h1>
+      {/* <h1>{roomId} {name} {role}</h1> */}
     </div>
   );
 }
