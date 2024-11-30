@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -34,5 +34,209 @@
   }
   to {
     transform: rotate(360deg);
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* General reset and body styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #181818; /* Dark background for a cinematic look */
+  color: white;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* App Wrapper */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+/* Header Section */
+.App-header {
+  background: linear-gradient(135deg, #00bcd4, #6a5acd); /* Gradient background */
+  padding: 100px 20px;
+  text-align: center;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.5); /* Depth for the header */
+  border-radius: 10px;
+  margin: 40px 0;
+}
+
+.App-logo {
+  height: 150px;
+  animation: App-logo-spin infinite 20s linear;
+  transition: transform 0.5s ease-in-out;
+}
+
+.App-logo:hover {
+  transform: rotate(360deg) scale(1.1); /* Spin and scale effect */
+}
+
+.App-header h1 {
+  font-size: 3rem;
+  color: white;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+.App-header p {
+  font-size: 1.2rem;
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.App-link {
+  color: #ffcc00;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  background-color: #ffcc00;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.App-link:hover {
+  background-color: #e4a900;
+  transform: scale(1.05);
+}
+
+/* Hero Section - Highlighting Live Streams */
+.hero-section {
+  background-image: url('https://via.placeholder.com/1500x800'); /* Placeholder background */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
+  margin-bottom: 50px;
+}
+
+.hero-section h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Featured Streams Section */
+.featured-streams {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.stream-card {
+  background-color: #222222;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  height: 450px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.stream-card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.stream-card:hover img {
+  opacity: 0.8; /* Slight fade effect */
+}
+
+.stream-card .card-content {
+  padding: 15px;
+  text-align: left;
+}
+
+.stream-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+.stream-card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.stream-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer Section */
+.App-footer {
+  background-color: #181818;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.App-footer a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.App-footer a:hover {
+  color: #ff9900;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 20px;
+  }
+
+  .hero-section h2 {
+    font-size: 2rem;
+  }
+
+  .stream-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-streams {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stream-card img {
+    height: 50%;
   }
 }
